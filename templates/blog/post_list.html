@@ -5,7 +5,13 @@
     <title>My Firs Blog (powered by Django)</title>
 </head>
 <body>
-<h1>Funcionou!</h1>
-{{ posts }}
+<h1>My Firs Blog (powered by Django)</h1><br/>
+{% for post in posts %}
+    <div>
+        <h1><a href="">{{ post.title }}</a></h1>
+        <p>{{ post.text|linebreaksbr }}</p>
+        <p>publicado em: {{ post.published_date }}</p><br/>
+    </div>
+{% endfor %}
 </body>
 </html>
